@@ -201,10 +201,10 @@ msgstr ""
 
 #: gourl.php:521
 msgid ""
-"Support payments in Bitcoin, Bitcoin Cash, Litecoin, Dash, Dogecoin, "
+"Support payments in Bitcoin, Bitcoin Cash, Litecoin, Neutron, Dogecoin, "
 "Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit"
 msgstr ""
-"Поддержка платежей в Биткоинах, Bitcoin Cash, Litecoin, Dash, Dogecoin, "
+"Поддержка платежей в Биткоинах, Bitcoin Cash, Litecoin, Neutron, Dogecoin, "
 "Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit"
 
 #: gourl.php:522

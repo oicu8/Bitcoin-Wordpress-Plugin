@@ -7,7 +7,7 @@ Version 1.4.12
 
 **GoUrl Official Bitcoin/Altcoin Payment Gateway for Wordpress 3.5 or higher version**
 
-Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit payments on your Wordpress Website Online. It's Easy! 
+Accept Bitcoin, BitcoinCash, Litecoin, Neutron, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit payments on your Wordpress Website Online. It's Easy! 
 
 
 * Author URI: [https://gourl.io](https://gourl.io)
@@ -31,7 +31,7 @@ Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potc
 * No Monthly Fee, Transaction Fee from 0%. Set your own prices in USD, [EUR, GBP, RUB, AUD (100 currencies)](https://wordpress.org/plugins/gourl-woocommerce-bitcoin-altcoin-payment-gateway-addon/)
 * No ID Required, No Bank Account Needed. Global, Anonymous, Secure, No Chargebacks, Zero Risk
 * Get payments straight to your bitcoin/altcoin wallets and convert to [USD/EUR/etc](https://gourl.io/#usd) later. All in automatic mode
-* Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit payments Online on your Wordpress website 
+* Accept Bitcoin, BitcoinCash, Litecoin, Neutron, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit payments Online on your Wordpress website 
 * [Pay-Per-Product](http://gourl.io/lib/examples/pay-per-product-multi.php) - advanced solution for your registered users: sell any products on website, etc 
 * [Pay-Per-Download](http://gourl.io/lib/examples/pay-per-download-multi.php) - simple solution for your unregistered visitors: make money on file downloads 
 * [Pay-Per-View/Page](http://gourl.io/lib/examples/pay-per-page-multi.php) - for your unregistered visitors: offer paid access to your premium content/videos 
@@ -90,7 +90,7 @@ Installation
 
 **1.1 Automatic installation**
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of GoUrl Bitcoin Payment Gateway & Paid Downloads & Membership, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't need to leave your web browser. To do an automatic install of GoUrl Bitcoin Payment Gateway & Paid Downloads & Membership, log in to your WordPress NTRNboard, navigate to the Plugins menu and click Add New.
 
 In the search field type "GoUrl" and click Search Plugins. Once you've found our plugin you can view details about it such as the rating and description. Most importantly, of course, you can install it by simply clicking Install Now.
 

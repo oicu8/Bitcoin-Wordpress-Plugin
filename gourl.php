@@ -283,7 +283,7 @@ final class gourlclass
 	*/
 	public static function coin_names()
 	{
-		return array('BTC' => 'bitcoin', 'BCH' => 'bitcoincash', 'LTC' => 'litecoin', 'DASH' => 'dash', 'DOGE' => 'dogecoin', 'SPD' => 'speedcoin', 'RDD' => 'reddcoin', 'POT' => 'potcoin', 'FTC' => 'feathercoin', 'VTC' => 'vertcoin', 'PPC' => 'peercoin', 'UNIT' => 'universalcurrency', 'MUE' => 'monetaryunit');
+		return array('BTC' => 'bitcoin', 'BCH' => 'bitcoincash', 'LTC' => 'litecoin', 'Neutron' => 'NTRN', 'DOGE' => 'dogecoin', 'SPD' => 'speedcoin', 'RDD' => 'reddcoin', 'POT' => 'potcoin', 'FTC' => 'feathercoin', 'VTC' => 'vertcoin', 'PPC' => 'peercoin', 'UNIT' => 'universalcurrency', 'MUE' => 'monetaryunit');
 	}
 	
 	
@@ -292,7 +292,7 @@ final class gourlclass
 	*/
 	public static function coin_chain()
 	{
-		return array('bitcoin' => 'https://blockchain.info/', 'bitcoincash' => 'http://blockdozer.com/', 'litecoin' => 'https://bchain.info/LTC/', 'dash' => 'https://chainz.cryptoid.info/dash/', 'dogecoin' => 'https://dogechain.info/', 'speedcoin' => 'http://speedcoin.org:2750/', 'reddcoin' => 'http://live.reddcoin.com/', 'potcoin' => 'https://chainz.cryptoid.info/pot/', 'feathercoin' => 'https://chainz.cryptoid.info/ftc/', 'vertcoin' => 'https://explorer.vertcoin.org/exp/', 'peercoin' => 'https://bkchain.org/ppc/', 'monetaryunit' => 'https://chainz.cryptoid.info/mue/', 'universalcurrency' => 'https://explorer.u-currency.com/');
+		return array('bitcoin' => 'https://blockchain.info/', 'bitcoincash' => 'http://blockdozer.com/', 'litecoin' => 'https://bchain.info/LTC/', 'NTRN' => 'https://chainz.cryptoid.info/NTRN/', 'dogecoin' => 'https://dogechain.info/', 'speedcoin' => 'http://speedcoin.org:2750/', 'reddcoin' => 'http://live.reddcoin.com/', 'potcoin' => 'https://chainz.cryptoid.info/pot/', 'feathercoin' => 'https://chainz.cryptoid.info/ftc/', 'vertcoin' => 'https://explorer.vertcoin.org/exp/', 'peercoin' => 'https://bkchain.org/ppc/', 'monetaryunit' => 'https://chainz.cryptoid.info/mue/', 'universalcurrency' => 'https://explorer.u-currency.com/');
 	}
 
 
@@ -301,7 +301,7 @@ final class gourlclass
 	*/
 	public static function coin_www()
 	{
-		return array('bitcoin' => 'https://bitcoin.org/', 'bitcoincash' => 'https://www.bitcoincash.org/', 'litecoin' => 'https://litecoin.org/', 'dash' => 'https://www.dashpay.io/', 'dogecoin' => 'http://dogecoin.com/', 'speedcoin' => 'https://speedcoin.org/', 'reddcoin' => 'http://reddcoin.com/', 'potcoin' => 'http://www.potcoin.com/', 'feathercoin' => 'https://www.feathercoin.com/', 'vertcoin' => 'http://vertcoin.org/', 'peercoin' => 'http://peercoin.net/', 'monetaryunit' => 'http://www.monetaryunit.org/', 'universalcurrency' => 'https://www.u-currency.com/');
+		return array('bitcoin' => 'https://bitcoin.org/', 'bitcoincash' => 'https://www.bitcoincash.org/', 'litecoin' => 'https://litecoin.org/', 'NTRN' => 'https://www.NTRNpay.io/', 'dogecoin' => 'http://dogecoin.com/', 'speedcoin' => 'https://speedcoin.org/', 'reddcoin' => 'http://reddcoin.com/', 'potcoin' => 'http://www.potcoin.com/', 'feathercoin' => 'https://www.feathercoin.com/', 'vertcoin' => 'http://vertcoin.org/', 'peercoin' => 'http://peercoin.net/', 'monetaryunit' => 'http://www.monetaryunit.org/', 'universalcurrency' => 'https://www.u-currency.com/');
 	}
 	
 	
@@ -576,7 +576,7 @@ final class gourlclass
 		$tmp .= "<tr><td><a name='chart' id='chart'></a>".__('Recent Payment', GOURL)."</td><td colspan='3'>".$dt_last."</td></tr>";
 		$tmp .= "</table>";
 		
-		$charts = array('BTC' => 7777, 'LTC' => 3, 'DOGE' => 132, 'DASH' => 155, 'RDD' => 169, 'POT' => 173, 'FTC' => 5, 'VTC' => 151, 'VRC' => 209, 'PPC' => 28);
+		$charts = array('BTC' => 7777, 'LTC' => 3, 'DOGE' => 132, 'Neutron' => 155, 'RDD' => 169, 'POT' => 173, 'FTC' => 5, 'VTC' => 151, 'VRC' => 209, 'PPC' => 28);
 		$chart = (isset($_GET["chart"]) && isset($charts[$_GET["chart"]])) ? $_GET["chart"] : "BTC";
 
 		$days = array(5=>"5 days", 10=>"10 days", 15=>"15 days", 31=>"1 month", 60=>"2 months", 90=>"3 months",120=>"4 months",180=>"6 months",240=>"9 months",360=>"1 year");
@@ -617,7 +617,7 @@ final class gourlclass
 		$tmp .= '<li> '.sprintf(__("<a href='%s'>Pay-Per-Membership</a> - for your <b>registered users</b>: offer paid access to your premium content, custom <a href='%s'>actions</a>", GOURL), GOURL_ADMIN.GOURL.'paypermembership', plugins_url("/images/dir/membership_actions.txt", __FILE__))." <a target='_blank' href='https://gourl.io/lib/examples/pay-per-membership-multi.php'>".$img."</a></li>";
 		$tmp .= '<li> '.sprintf(__("<a href='%s'>Pay-Per-Product</a> - advanced solution for your <b>registered users</b>: sell any products on website, invoices with buyer confirmation email, etc", GOURL), GOURL_ADMIN.GOURL.'products')." <a target='_blank' href='https://gourl.io/lib/examples/pay-per-product-multi.php'>".$img."</a></li>";
 		$tmp .= '<li> '.__("<a href='#addon'>Working with third-party plugins</a> - good support for third party plugins (WoCommerce, Jigoshop, bbPress, AppThemes, etc)", GOURL).'</li>';
-		$tmp .= '<li> '.__("Support payments in Bitcoin, Bitcoin Cash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit", GOURL).'</li>';
+		$tmp .= '<li> '.__("Support payments in Bitcoin, Bitcoin Cash, Litecoin, Neutron, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit", GOURL).'</li>';
 		$tmp .= '<li> '.__("<b>Auto Synchronization</b> - between payments data stored on your GoUrl.io account and your Website. If GoUrl attempts to deliver a payment notification/transaction confirmation but your website is unavailable, the notification is stored on the queue, and delivered to the your website when it becomes available (re-check connection with your website every hour)", GOURL).'</li>';
 		$tmp .= '<li> '.sprintf(__("Free <a href='%s'>Plugin Support</a> and <a href='#addon'>Free Add-ons</a> for You", GOURL), "https://gourl.io/view/contact/Contact_Us.html").'</li>';
 		$tmp .= "</ul>";
@@ -629,8 +629,8 @@ final class gourlclass
 		$tmp .= "<br><br><br><br>";
 		$tmp .= "<div class='gourltitle'>".__('Free Bitcoin Gateway Add-ons', GOURL)."</div>";
 		$tmp .= "<p>".__('The following Add-ons extend the functionality of GoUrl -', GOURL);
-		$tmp .= '<a style="margin-left:20px" target="_blank" href="https://wordpress.org/plugins/search/gourl/" class="button-primary">'.__('All Add-ons on Wordpress.prg', GOURL).'<span class="dashicons dashicons-external"></span></a>';
-		$tmp .= '<a style="margin-left:30px" href="'.admin_url('plugin-install.php?tab=search&type=author&s=gourl').'" class="button-primary">'.__("View on 'Add Plugins' Page", GOURL).'<span class="dashicons dashicons-external"></span></a>';
+		$tmp .= '<a style="margin-left:20px" target="_blank" href="https://wordpress.org/plugins/search/gourl/" class="button-primary">'.__('All Add-ons on Wordpress.prg', GOURL).'<span class="NTRNicons NTRNicons-external"></span></a>';
+		$tmp .= '<a style="margin-left:30px" href="'.admin_url('plugin-install.php?tab=search&type=author&s=gourl').'" class="button-primary">'.__("View on 'Add Plugins' Page", GOURL).'<span class="NTRNicons NTRNicons-external"></span></a>';
 		$tmp .= "</p>";
 		
 		$tmp .= "<table class='gourltable gourltable-addons'>";
@@ -746,7 +746,7 @@ final class gourlclass
 		$ltc = "LarmyXoQpydpUCYHx9DZeYoxcQ4YzMfHDt";
 		$spd = "SiDHas473qf8JPJFvFLcNuAAnwXhxtvv9s";
 		$doge = "DNhHdAxV7CCqjPuwg2W4qTESd5jkF7iC1C";
-		$dash = "XfMTeciUUZEvRRHB49qaY9Jzi1E5HAJawJ";
+		$NTRN = "XfMTeciUUZEvRRHB49qaY9Jzi1E5HAJawJ";
 		$rdd = "RmB8ysK4YG4D3axNPHsKEoqxvg5KwySSJz";
 		$pot = "PKwNNWo6YdweQk2F87UDGp84TQK878PWho";
 		$ftc = "6otKdaB1aasmQ5kA9wKBXJM5mi9e19VxYQ";
@@ -776,7 +776,7 @@ final class gourlclass
 		$tmp .= "<p>Bitcoin: &#160; <a href='bitcoin:".$btc."?label=Donation'>".$btc."</a></p>";
 		$tmp .= "<p>BitcoinCash: &#160; <a href='bitcoincash:".$bch."?label=Donation'>".$bch."</a></p>";
 		$tmp .= "<p>Litecoin: &#160; <a href='litecoin:".$ltc."?label=Donation'>".$ltc."</a></p>";
-		$tmp .= "<p>Dash: &#160; <a href='dash:".$dash."?label=Donation'>".$dash."</a></p>";
+		$tmp .= "<p>Neutron: &#160; <a href='NTRN:".$NTRN."?label=Donation'>".$NTRN."</a></p>";
 		$tmp .= "<p>Dogecoin: &#160; <a href='dogecoin:".$doge."?label=Donation'>".$doge."</a></p>";
 		$tmp .= "<p>Speedcoin: &#160; <a href='speedcoin:".$spd."?label=Donation'>".$spd."</a></p>";
 		$tmp .= "<p>Reddcoin: &#160; <a href='reddcoin:".$rdd."?label=Donation'>".$rdd."</a></p>";
@@ -1892,7 +1892,7 @@ final class gourlclass
 			echo '<div class="'.GOURL.'intro_btn"><a href="'.GOURL_ADMIN.GOURL.'files&intro=1" class="'.GOURL.'button button-secondary">'.__('Hide Introduction', GOURL).' &#8595;</a></div>';
 			echo "<div class='".GOURL."intro postbox'>";
 			echo '<a style="float:right" target="_blank" href="https://gourl.io/lib/examples/pay-per-download-multi.php"><img width="110" hspace="10" title="Example - Pay Per Download" src="'.plugins_url('/images/pay-per-download.png', __FILE__).'" border="0"></a>';
-			echo '<p>'.sprintf(__("Easily Sell Files, Videos, Music, Photos, Software (digital downloads) on your WordPress site/blog and accept %s payments online. No Chargebacks, Global, Secure. Anonymous Bitcoins & Cryptocurrency Payments. All in automatic mode. &#160; <a target='_blank' href='%s'>Example</a><br>If your site requires registration - activate website registration (General Settings &#187; Membership - <a href='%s'>Anyone can register</a>) and customize <a href='%s'>login</a> image.", GOURL), "<b>Bitcoin</b>, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit", "https://gourl.io/lib/examples/pay-per-download-multi.php", admin_url('options-general.php'), GOURL_ADMIN.GOURL."settings#images") .'</p>';
+			echo '<p>'.sprintf(__("Easily Sell Files, Videos, Music, Photos, Software (digital downloads) on your WordPress site/blog and accept %s payments online. No Chargebacks, Global, Secure. Anonymous Bitcoins & Cryptocurrency Payments. All in automatic mode. &#160; <a target='_blank' href='%s'>Example</a><br>If your site requires registration - activate website registration (General Settings &#187; Membership - <a href='%s'>Anyone can register</a>) and customize <a href='%s'>login</a> image.", GOURL), "<b>Bitcoin</b>, BitcoinCash, Litecoin, Neutron, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, UniversalCurrency, MonetaryUnit", "https://gourl.io/lib/examples/pay-per-download-multi.php", admin_url('options-general.php'), GOURL_ADMIN.GOURL."settings#images") .'</p>';
 			echo '<p>'.sprintf(__("Create <a href='%s'>New Paid File Downloads</a> and place new generated <a href='%s'>shortcode</a> on your public page/post. Done!", GOURL), GOURL_ADMIN.GOURL.'file', plugins_url('/images/tagexample_download_full.png', __FILE__)).$this->space(1);
 			echo sprintf(__("<a href='%s'>Read more</a>", GOURL), GOURL_ADMIN.GOURL."#i3").'</p>';
 			echo '<p><b>-----------------<br>'.sprintf(__("Alternatively, you can use free <a href='%s'>Easy Digital Downloads</a> plugin (advanced digital selling plugin with Credit Cards/Paypal) with our <a href='%s'>EDD Bitcoin/Altcoin Gateway</a> addon", GOURL), admin_url('plugin-install.php?tab=search&type=term&s=Easy+Digital+Downloads+sell+complete+management+sales+charts+Email+Subscribers+csv'), admin_url('plugin-install.php?tab=search&type=term&s=gourl+easy+digital+Downloads+edd')) . '</b></p>';
@@ -5881,13 +5881,13 @@ final class gourlclass
 			$amount 	    = 0;
 		}
 		
-		// product prices in cryptocurrency; convert crypto to other crypto (DASH to LTC directly, etc) on your server side (yourwebsite.com) 
+		// product prices in cryptocurrency; convert crypto to other crypto (Neutron to LTC directly, etc) on your server side (yourwebsite.com) 
 		// for example 112 LTC ($amount=112 $amountLabel=LTC) need to convert to $coinName (Current selected coin by user)
 		elseif ($amountLabel != $coinLabel)
 		{
-	        // for example, convert LTC to DASH
+	        // for example, convert LTC to Neutron
 	        $s  = $amountLabel == "BTC" ? $amount : $amount * gourl_altcoin_btc_price($amountLabel); // total order price in bitcoins (LTC->BTC)
-	        $e  = $coinLabel == "BTC" ? 1 : gourl_altcoin_btc_price($coinLabel); // coinName rate in bitcoins (DASH->BTC)
+	        $e  = $coinLabel == "BTC" ? 1 : gourl_altcoin_btc_price($coinLabel); // coinName rate in bitcoins (Neutron->BTC)
 	        $s = (!$e) ? 0 : $s / $e;
 	        
 	        // successfully
@@ -8145,7 +8145,7 @@ function gourl_bitcoin_live_price ($currency, $interval = 1)
 
 
 /*
- *	XXVI. Get Altcoins Live Rates to BTC - DASH/BTC, LTC/BTC, BCH/BTC
+ *	XXVI. Get Altcoins Live Rates to BTC - Neutron/BTC, LTC/BTC, BCH/BTC
  *  Update interval in hours; default 1 hour
  */
 function gourl_altcoin_btc_price ($altcoin, $interval = 1)
